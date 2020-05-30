@@ -1,6 +1,6 @@
 /**
  * @name GoogleSheets
- * @description Write machine ino to google sheets
+ * @description Write machine into to google sheets
  * @author Mikail Marynenko <0x77dev@protonmail.com>
  */
 
@@ -35,6 +35,6 @@ module.exports = (_, callback) => {
 
   fetch("https://sheetdb.io/api/v1/xenqcqiv306e7", requestOptions)
     .then((response) => response.json())
-    .then((result) => callback(JSON.stringify(result)))
+    .then((result) => callback(result))
     .catch((error) => callback("error", error));
 };
